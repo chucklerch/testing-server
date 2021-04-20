@@ -20,12 +20,12 @@ var (
 func homePage(w http.ResponseWriter, req *http.Request) {
 	fmt.Fprintf(w, "<!DOCTYPE html><html><head><title>Homepage</title></head>\n")
 	fmt.Fprintf(w, "<body style=\"background-color:%s;\">", bgColor)
-	fmt.Fprintf(w, "<p>Version %s\n", version)
-	fmt.Fprintf(w, "<p>Hostname %s\n", hostname)
-	fmt.Fprintf(w, "<p>Pod Name %s\n", podname)
+	fmt.Fprintf(w, "<p>Version:  %s\n", version)
+	fmt.Fprintf(w, "<p>Hostname: %s\n", hostname)
+	fmt.Fprintf(w, "<p>Pod Name: %s\n", podname)
 	fmt.Fprintf(w, "<h4>Links</h4>")
 	fmt.Fprintf(w, "<p><a href=\"/headers\">Headers</a>\n")
-	fmt.Fprintf(w, "<p><a href=\"/status?code=200\">Status</a>\n")
+	fmt.Fprintf(w, "<p><a href=\"/status?code=200\">Status Code</a>\n")
 	fmt.Fprintf(w, "</body></html>\n")
 }
 
